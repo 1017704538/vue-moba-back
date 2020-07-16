@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Main from '../components/Main.vue'
 import CreateCategory from '../components/CreateCategory.vue'
 import CategoryList from '../components/CategoryList.vue'
+import ItemsList from '../components/ItemsList.vue'
 Vue.use(VueRouter)
 
   const routes = [
@@ -18,6 +19,10 @@ Vue.use(VueRouter)
       {
         path: '/categories/list',
         component: CategoryList 
+      },
+      {
+        path: '/items/list',
+        component: ItemsList
       }
     ]
   },

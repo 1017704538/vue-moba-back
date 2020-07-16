@@ -16,7 +16,11 @@ import {
     Message,
     MessageBox,
     Table,
-    TableColumn
+    TableColumn,
+    Dialog,
+    Select,
+    Option,
+    Upload
 
 } from 'element-ui'
 
@@ -35,6 +39,10 @@ Vue.use(Input)
 Vue.use(Button)
 Vue.use(Table)
 Vue.use(TableColumn)
+Vue.use(Dialog)
+Vue.use(Select)
+Vue.use(Option)
+Vue.use(Upload)
 
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
