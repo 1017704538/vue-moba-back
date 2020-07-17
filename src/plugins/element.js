@@ -20,7 +20,12 @@ import {
     Dialog,
     Select,
     Option,
-    Upload
+    Upload,
+    Rate,
+    Tabs,
+    TabPane,
+    Row,
+    Col
 
 } from 'element-ui'
 
@@ -43,6 +48,11 @@ Vue.use(Dialog)
 Vue.use(Select)
 Vue.use(Option)
 Vue.use(Upload)
+Vue.use(Rate)
+Vue.use(Tabs)
+Vue.use(TabPane)
+Vue.use(Row)
+Vue.use(Col)
 
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm

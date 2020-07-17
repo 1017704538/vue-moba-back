@@ -9,3 +9,6 @@ html, body, #app {
     margin-top: 15px;
     font-size: 12px;
 }
+.el-icon-plus:before {
+    color:#ffffff;
+}

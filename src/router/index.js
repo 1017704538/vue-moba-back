@@ -1,29 +1,31 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Main from '../components/Main.vue'
-import CreateCategory from '../components/CreateCategory.vue'
 import CategoryList from '../components/CategoryList.vue'
-import ItemsList from '../components/ItemsList.vue'
+import CategoryEdit from '../components/CategoryEdit.vue'
+import ItemList from '../components/ItemList.vue'
+import ItemEdit from '../components/ItemEdit.vue'
+import HeroList from '../components/HeroList.vue'
+import HeroEdit from '../components/HeroEdit.vue'
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'main',
     component: Main,
     children: [
-      {
-        path: '/categories/create',
-        component: CreateCategory
-      },
-      {
-        path: '/categories/list',
-        component: CategoryList 
-      },
-      {
-        path: '/items/list',
-        component: ItemsList
-      }
+      { path: '/categories/create', component: CategoryEdit },
+      { path: '/categories/edit/:id', component: CategoryEdit, props: true },
+      { path: '/categories/list', component: CategoryList },
+
+      { path: '/items/create',component: ItemEdit },
+      { path: '/items/edit/:id', component: ItemEdit, props: true },
+      { path: '/items/list', component: ItemList},
+
+      { path: '/heroes/list', component: HeroList },
+      { path: '/heroes/create',component: HeroEdit },
+      { path: '/heroes/edit/:id', component: HeroEdit, props: true },
     ]
   },
 ]
