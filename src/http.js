@@ -1,5 +1,6 @@
 import axios from 'axios'
 import Vue from 'vue'
+import router from './router'
 
 const http = axios.create({
     // baseURL: process.env.VUE_APP_API_URL || '/admin/api',
@@ -25,6 +26,9 @@ http.interceptors.response.use(res => {
             type: 'error',
             message: err.response.data.message
         })
+        if(err.response.data.statusCode === 401) {
+          Vue.prototype.$router.push('/login')
+        }
     }
 
     return Promise.reject(err)

@@ -56,6 +56,7 @@ export default {
         },
         async login() {
             const res = await this.$http.post('login', this.loginForm)
+            // console.log(res.data.token)
             localStorage.token = res.data.token
             // sessionStorage.token = res.data.token
             this.$router.push('/')
